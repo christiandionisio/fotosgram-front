@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +29,9 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
     },
-    Geolocation
+    Geolocation,
+    Camera,
+    FileTransfer
   ],
   bootstrap: [AppComponent],
 })
